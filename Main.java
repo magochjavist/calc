@@ -112,6 +112,22 @@ public class Main {
 
     private static String arabicToRoman(int number) {
         StringBuilder sb = new StringBuilder();
+        while (number >= 100) {
+            sb.append("C");
+            number -= 100;
+        }
+        while (number >= 90) {
+            sb.append("XC");
+            number -= 90;
+        }
+        while (number >= 50) {
+            sb.append("L");
+            number -= 50;
+        }
+        while (number >= 40) {
+            sb.append("XL");
+            number -= 40;
+        }
         while (number >= 10) {
             sb.append("X");
             number -= 10;
